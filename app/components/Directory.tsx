@@ -1,6 +1,6 @@
 import * as React from "react";
-
 import { Person } from "./Person";
+import { concat, sortBy, map, sample } from 'lodash';
 import "./Directory.less";
 
 export interface DirectoryProps { 
@@ -9,14 +9,15 @@ export interface DirectoryProps {
 
 export class Directory extends React.Component<DirectoryProps, undefined> {
     render() {
-        var people = [
-            { firstName: "Paul", lastName: "Stovell" },
-            { firstName: "Sonia", lastName: "Stovell" },
-        ];
+        var people = [];
+        for (var i = 1; i <= this.props.numberOfPeople; i++) {
+            people.push({firstName: "First " + i, lastName: "Last " + i });
+        }
+
         return (
             <div>
                 {people.map(person => 
-                    <div>
+                    <div key={person.firstName}>
                         <Person firstName={person.firstName} lastName={person.lastName} />
                     </div>
                 )}
