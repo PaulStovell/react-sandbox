@@ -1,0 +1,4 @@
+--ui bdd
+--require ts-node/register 
+--require ignore-styles 
+app/**/*.spec.ts*
