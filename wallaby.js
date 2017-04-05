@@ -4,12 +4,12 @@ module.exports = function (wallaby) {
       'app/**/*.ts*',
       'app/**/*.less',
       'app/**/*.css',
-      '!app/**/*.spec.ts*',
+      '!app/**/*.test.ts*',
       '!app/index.tsx'
     ],
 
     tests: [
-      'app/**/*.spec.ts*'
+      'app/**/*.test.ts*'
     ],
 
     setup: function () {
