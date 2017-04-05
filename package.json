@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --open",
     "dev": "webpack --progress --watch",
     "build-prod": "webpack -p",
-    "test": "mocha"
+    "test": "mocha --ui bdd --require ts-node/register --require ignore-styles app/**/*.test.ts*"
   },
   "keywords": [],
   "author": "",
