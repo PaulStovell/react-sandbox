@@ -1,6 +1,3 @@
-var wallabyWebpack = require('wallaby-webpack');
-var webpackPostprocessor = wallabyWebpack({});
-
 module.exports = function (wallaby) {
   return {
     files: [
@@ -15,17 +12,13 @@ module.exports = function (wallaby) {
       'app/**/*.spec.ts*'
     ],
 
-    postprocessor: webpackPostprocessor,
-
     setup: function () {
-      window.__moduleBundler.loadTests();
-      // var mocha = wallaby.testFramework;
-      // mocha.ui('tdd');
+      require('ignore-styles');
     },
 
     testFramework: 'mocha',
-    // env: {
-    //   type: 'node'
-    // }
+    env: {
+      type: 'node'
+    }
   };
 };
