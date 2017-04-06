@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Person } from "./Person";
-import { concat, sortBy, map, sample } from 'lodash';
 import "./Directory.less";
 
 export interface DirectoryProps { 
